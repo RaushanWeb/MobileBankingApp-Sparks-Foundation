@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MobileBanking</string>
+    <string name="viewtransaction">viewtransaction</string>
+
+    <string-array name="recipient_array">
+        <item>SelectRecipient</item>
+        <item>Raushan</item>
+        <item>Golu</item>
+        <item>Deepak kumar</item>
+        <item>Pawan Kumar</item>
+        <item>Deepesh kumar</item>
+        <item>Munna Tripathi</item>
+        <item>Shivam tiwari</item>
+        <item>Pooja</item>
+        <item>Shivani</item>
+        <item>M k Das</item>
+    </string-array>
+</resources>
