@@ -73,7 +73,8 @@ public class TransferActivity extends AppCompatActivity
         confermTransfer.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v) {
+            public void onClick(View v)
+            {
                 String enterAmount = EnterBalance.getText().toString();
                 //  if(enterAmount.equals(" "))
                 if (TextUtils.isEmpty(enterAmount))
@@ -84,6 +85,11 @@ public class TransferActivity extends AppCompatActivity
                 }
 
                 DataSet receiverName = getUser(sReciverName);
+                if(sReciverName.equals("SelectRecipient") || sReciverName == "")
+                {
+                    Toast.makeText(TransferActivity.this,"select a valid Recipient",Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 int balance = Integer.parseInt(enterAmount);
                 if (balance < 1)

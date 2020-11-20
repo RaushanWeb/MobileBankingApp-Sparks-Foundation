@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity
 
     DatabaseHelper mydb;
     TransactionDatabase mytb;
-    Button transferMoney;
+    Button transferMoney,viewUser;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +32,11 @@ public class MainActivity extends AppCompatActivity
         mydb = new DatabaseHelper(this);
         mytb  = new TransactionDatabase(this);
 
-        transferMoney = (Button)findViewById(R.id.transferMoney);
+        /*1*/transferMoney = (Button)findViewById(R.id.transferMoney);
         moneyTransfer();
-
+       /*2*/ viewUser = (Button)findViewById(R.id.viewUserButton);
+        vieuUserButton();
+       // addUser();
         Cursor cursor = mydb.readAllData();
         if(cursor.getCount() == 0) {
             intialiseDatabase();
@@ -148,7 +150,7 @@ public class MainActivity extends AppCompatActivity
 
     }
 
-    public void moneyTransfer()
+  /*1*/  public void moneyTransfer()
     {
         transferMoney.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -158,6 +160,18 @@ public class MainActivity extends AppCompatActivity
                 startActivity(intent);
             }
         });
+    }
+  /*2*/  public void vieuUserButton()
+    {
+        viewUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Intent intent = new Intent(getApplicationContext(),ViewUserButtonActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     public void addUser()

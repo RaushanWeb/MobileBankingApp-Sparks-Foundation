@@ -11,16 +11,20 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ProgrammingAdapter extends RecyclerView.Adapter<ProgrammingAdapter.ProgrammingViewHolder>
 {
-    ArrayList<DataSet> arrayList = new ArrayList<DataSet>();
+    List<DataSet> arrayList = new ArrayList<DataSet>();
     Context context;
 
     public ProgrammingAdapter(Context context,ArrayList<DataSet> arrayList)
     {
         this.context = context;
-        this.arrayList = arrayList;
+        if(arrayList.size() != 0)
+        {
+            this.arrayList = arrayList.subList(0,10);
+        }
     }
 
     @NonNull

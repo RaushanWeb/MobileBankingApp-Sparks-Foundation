@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/keyboardhidelayout"
@@ -11,7 +12,7 @@
 
     <TableRow
         android:id="@+id/simpleTableLayout5"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:padding="15dp">
@@ -20,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
             android:text="Name"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -30,7 +31,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="1"
-            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:autoSizeMaxTextSize="30dp"
             android:autoSizeMinTextSize="15dp"
@@ -43,36 +43,37 @@
 
     <TableRow
         android:id="@+id/simpleTableLayout6"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:padding="15dp">
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_column="0"
-            android:layout_marginLeft="10dp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="50dp"
             android:text="Recipient"
             android:textSize="30dp"
             android:textStyle="bold" />
 
         <Spinner
             android:id="@+id/spinner"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
             android:layout_weight="1"
-            android:autoSizeTextType = "uniform"
-            android:background="#fff"
-            android:padding="20dp"
-            android:paddingStart="15dp"
+            android:background="#ffffff"
+            android:entries="@array/recipient_array"
+            android:layerType="none"
+            android:scrollbarDefaultDelayBeforeFade="@android:integer/config_shortAnimTime"
+            android:spinnerMode="dropdown"
             android:textColor="#000" />
+
     </TableRow>
 
     <TableRow
         android:id="@+id/simpleTableLayout7"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:padding="15dp">
@@ -81,7 +82,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="0"
-            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
             android:text="Balance"
             android:textSize="30dp"
             android:textStyle="bold" />
@@ -91,7 +92,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_column="1"
-            android:layout_marginLeft="10dp"
             android:layout_weight="1"
             android:autoSizeTextType="uniform"
             android:background="#fff"

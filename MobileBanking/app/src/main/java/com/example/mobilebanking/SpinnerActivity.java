@@ -1,6 +1,7 @@
 package com.example.mobilebanking;
 
 import android.app.Activity;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.AdapterView;
 
@@ -11,7 +12,7 @@ public class SpinnerActivity extends Activity implements AdapterView.OnItemSelec
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id)
     {
-        sReciverName = parent.getItemAtPosition(position).toString();
+            sReciverName = parent.getItemAtPosition(position).toString();
     }
 
     @Override
